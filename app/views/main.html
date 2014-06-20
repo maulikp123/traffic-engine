@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link rel="stylesheet" href="@{'/public/leaflet/leaflet.css'}" />
+
+	<link href="@{'/public/ui-lightness/jquery-ui-1.8.23.custom.css'}" rel="stylesheet">
+    <link href="@{'/public/bootstrap/css/bootstrap.css'}" rel="stylesheet">
+    
+    
+   <style type="text/css">
+      body {
+        padding: 0px;
+        background-color: #fff;	
+      }
+      
+      #content 
+      {
+      	padding: 0px;
+      	margin-top: 40px;
+      }
+      
+      #map
+      {
+      	width: 100%;
+      }
+    
+    </style>
+
+    <link href="@{'/public/bootstrap/css/bootstrap-responsive.min.css'}" rel="stylesheet">
+    
+    <title>Traffic Engine</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/public/images/favicon.ico"/>
+
+	<script>
+	
+		var geoJsonOverlay;
+//		var defaultLatLon = [38.8900, -77.0300];
+//		changed for nyc
+//		var defaultLatLon = [40.7295,-73.9973];
+		var defaultLatLon = [${play.Play.configuration.getProperty("application.defaultLatLon")}];
+	
+	</script>
+
+</head>
+
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top" id="header">
+      <div class="navbar-inner">
+      	<a class="brand" href="#">&nbsp;Traffic Engine</a>
+        <div class="nav-collapse collapse">
+        
+        </div>
+            
+          <div class="nav-collapse">
+         
+            <ul class="nav">
+            	
+            	<li #{if page == 'index'}class="active"#{/if}><a href="@{Application.index}">Real-time</a></li>
+            	
+            	<li #{if page == 'data'}class="active"#{/if}><a href="@{Application.data}">Data</a></li>
+            	
+            	<li #{if page == 'simulator'}class="active"#{/if}><a href="@{Application.simulator}">Simulator</a></li>
+            	
+            	<li #{if page == 'paths'}class="active"#{/if}><a href="@{Application.paths}">Paths</a></li>
+	              
+            </ul>
+          </div>
+          
+          
+        </div>
+      </div>
+    </div>
+   
+#{script "jquery.js"/}
+#{script "underscore-min.js"/}
+
+<script src="@{'/public/bootstrap/js/bootstrap.min.js'}"></script>
+<script src="@{'/public/leaflet/leaflet.js'}"></script>
+
+    <div class="container-fluid" id="content">
+    
+    	#{doLayout /}
+    
+    </div>
+
+
+</body>
+    
+</html>
