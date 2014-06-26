@@ -1,1 +1,1 @@
-web: target/start -Dhttp.port=${PORT} ${JAVA_OPTS}
+web: java $JAVA_OPTS -Xmx2048M play.server.Server --port $PORT

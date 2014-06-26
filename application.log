@@ -1517,3 +1517,71 @@ Caused by: java.net.ConnectException: Connection refused: connect
 14:01:19,309 DEBUG ~ committed JDBC Connection
 14:01:19,309 DEBUG ~ aggressively releasing JDBC connection
 14:01:19,309 DEBUG ~ releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+16:33:16,368 INFO  ~ Starting C:\Users\Maulik\git\traffic-engine
+16:33:16,374 ERROR ~ Module repository will not be loaded because C:\home\kpw\.m2\repository does not exist
+16:33:17,104 WARN  ~ You're running Play! in DEV mode
+16:33:17,216 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16:33:25,549 DEBUG ~ Creating new CacheManager with default config
+16:33:25,554 DEBUG ~ Configuring ehcache from classpath.
+16:33:25,560 DEBUG ~ Configuring ehcache from ehcache.xml found in the classpath: jar:file:/C:/Users/Maulik/Downloads/play-1.2.5/framework/play-1.2.5.jar!/ehcache.xml
+16:33:25,563 DEBUG ~ Configuring ehcache from URL: jar:file:/C:/Users/Maulik/Downloads/play-1.2.5/framework/play-1.2.5.jar!/ehcache.xml
+16:33:25,563 DEBUG ~ Configuring ehcache from InputStream
+16:33:25,889 DEBUG ~ Ignoring ehcache attribute xmlns:xsi
+16:33:25,890 DEBUG ~ Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+16:33:25,949 DEBUG ~ propertiesString is null.
+16:33:25,954 DEBUG ~ No disk store path defined. Skipping disk store path conflict test.
+16:33:25,954 DEBUG ~ No CacheManagerEventListenerFactory class specified. Skipping...
+16:33:26,062 DEBUG ~ No BootstrapCacheLoaderFactory class specified. Skipping...
+16:33:26,062 DEBUG ~ CacheWriter factory not configured. Skipping...
+16:33:26,064 DEBUG ~ No CacheExceptionHandlerFactory class specified. Skipping...
+16:33:26,095 DEBUG ~ Initialised cache: play
+16:33:26,096 DEBUG ~ CacheDecoratorFactory not configured for defaultCache. Skipping for 'play'.
+16:33:27,130 ERROR ~ 
+
+@6ik8e41dg
+Internal Server Error (500) for request GET /
+
+JPA error
+A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+
+play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:630)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: No datasource configured
+	... 6 more
+16:33:27,294 DEBUG ~ Creating new CacheManager with default config
+16:33:27,294 DEBUG ~ Configuring ehcache from classpath.
+16:33:27,294 DEBUG ~ Configuring ehcache from ehcache.xml found in the classpath: jar:file:/C:/Users/Maulik/Downloads/play-1.2.5/framework/play-1.2.5.jar!/ehcache.xml
+16:33:27,294 DEBUG ~ Configuring ehcache from URL: jar:file:/C:/Users/Maulik/Downloads/play-1.2.5/framework/play-1.2.5.jar!/ehcache.xml
+16:33:27,294 DEBUG ~ Configuring ehcache from InputStream
+16:33:27,297 DEBUG ~ Ignoring ehcache attribute xmlns:xsi
+16:33:27,297 DEBUG ~ Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+16:33:27,299 DEBUG ~ propertiesString is null.
+16:33:27,299 DEBUG ~ No disk store path defined. Skipping disk store path conflict test.
+16:33:27,299 DEBUG ~ No CacheManagerEventListenerFactory class specified. Skipping...
+16:33:27,299 DEBUG ~ No BootstrapCacheLoaderFactory class specified. Skipping...
+16:33:27,299 DEBUG ~ CacheWriter factory not configured. Skipping...
+16:33:27,299 DEBUG ~ No CacheExceptionHandlerFactory class specified. Skipping...
+16:33:27,301 DEBUG ~ Initialised cache: play
+16:33:27,302 DEBUG ~ CacheDecoratorFactory not configured for defaultCache. Skipping for 'play'.
+16:33:27,356 ERROR ~ 
+
+@6ik8e41dh
+Internal Server Error (500) for request GET /
+
+JPA error
+A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+
+play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:115)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:526)
+	at play.Play.detectChanges(Play.java:630)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: No datasource configured
+	... 6 more
