@@ -170,5 +170,6 @@
 	<classpathentry kind="lib" path="lib/vecmath-1.3.2.jar"/>
 	<classpathentry kind="lib" path="lib/xercesImpl-2.4.0.jar"/>
 	<classpathentry kind="lib" path="/nyc-server/lib/xercesImpl-2.7.1.jar"/>
+	<classpathentry kind="lib" path="/weeels-ride-batcher/target/weeels-ride-batcher-0.9.3/WEB-INF/lib/mongo-java-driver-2.7.1.jar"/>
 	<classpathentry kind="output" path="eclipse/classes"/>
 </classpath>
