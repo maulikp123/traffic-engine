@@ -1,9 +1,9 @@
 package models;
 
-import com.rabbitmq.client.Channel;
+/*import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-
+*/
 import play.Logger;
 import play.Play;
 
@@ -29,7 +29,7 @@ public class RabbitMQClient {
 		rideQueue = Play.configuration.getProperty("tp.request-queue");
 		rideExchange = Play.configuration.getProperty("tp.request-exchange");
 	}
-	
+/*	Commented out for production deployment
 	public Channel getRideRequestChannel() {
 		getRideRequestClient();
 		String uri = "amqp://" + user + ":" + pass + "@" + host + ":" + port;
@@ -48,7 +48,7 @@ public class RabbitMQClient {
 		 }
 		return channel;
 	}
-
+*/
 	/**
 	 * @return the rideQueue
 	 */

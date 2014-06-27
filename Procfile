@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -Xmx2048M play.server.Server --port $PORT
+web:	play run --http.port=$PORT $PLAY_OPTS

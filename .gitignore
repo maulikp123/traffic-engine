@@ -1,9 +1,10 @@
 .project
 .settings
 .classpath
-target
-eclipse
-tmp
+target/
+eclipse/
+logs/
+lib/
+tmp/
 .log
 .pid
-.conf

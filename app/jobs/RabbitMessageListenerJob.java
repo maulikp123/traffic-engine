@@ -5,12 +5,12 @@ import java.util.concurrent.Executors;
 
 import models.MongoClient;
 import models.RabbitMQClient;
-
+/*
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.QueueingConsumer;
-
+*/
 import play.Logger;
 import play.jobs.Job;
 import play.jobs.OnApplicationStart;
@@ -25,7 +25,8 @@ public class RabbitMessageListenerJob extends Job {
 		try {
 		    System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 		    mongo.showRecords();
-		    Channel rabbitChannel = rabbitClient.getRideRequestChannel();
+/*		    Commented out for production deployment
+ 			Channel rabbitChannel = rabbitClient.getRideRequestChannel();
 		    if(rabbitChannel != null) {
 			    QueueingConsumer consumer = new QueueingConsumer(rabbitChannel);
 			    rabbitChannel.basicConsume(rabbitClient.getRideQueue(), true, consumer);
@@ -39,7 +40,7 @@ public class RabbitMessageListenerJob extends Job {
 		    else {
 		    	Logger.error("Error in RabbitMessageListenerJob: Unable to find channel");
 		    }
-		}
+*/		}
 	    catch(Exception ex) {
 	    	Logger.error("Error in RabbitMessageListenerJob - "+ ex.toString());
 	    }
