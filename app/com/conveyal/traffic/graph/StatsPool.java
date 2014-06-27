@@ -27,7 +27,7 @@ public class StatsPool {
 	                redisUri.getUserInfo().split(":",2)[1]);
 	} catch (URISyntaxException e) {
 	        // URI couldn't be parsed.
-		Logger.error(ErrorTAG + "Redis URI couldn't be parsed.", e);
+		Logger.error(ErrorTAG + "Redis URI couldn't be parsed. \n", e);
 	}
 	}
 }
